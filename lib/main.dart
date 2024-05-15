@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   LatLng? _currentLocation;
   LatLng? _targetLocation;
   Set<Polyline> _polylines = {};
-  String _googleApiKey = 'AIzaSyDe2sZXfyEyWQVFaxHY7-E7TewO2Dxvu9w';
+  String _googleApiKey = 'YOUR API İS HERE';
 
   @override
   void initState() {
