@@ -80,12 +80,6 @@ class _HomePageState extends State<HomePage> {
             width: 5,
             points: polylineCoordinates,
           ),
-          Polyline(
-            polylineId: PolylineId('markers_line'),
-            color: Colors.blue,
-            width: 5,
-            points: [_currentLocation!, _targetLocation!],
-          ),
         };
         setState(() {});
       }
