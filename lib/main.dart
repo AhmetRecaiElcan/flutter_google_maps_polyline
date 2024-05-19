@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Yürüme Uygulaması',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
       home: HomePage(),
     );
@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   LatLng? _currentLocation;
   LatLng? _targetLocation;
   Set<Polyline> _polylines = {};
-  String _googleApiKey = 'YOUR API İS HERE';
+  String _googleApiKey = "YOUR API KEY IS HERE";
 
   @override
   void initState() {
@@ -89,7 +89,8 @@ class _HomePageState extends State<HomePage> {
   List<LatLng> polylineToLatLng(String polyline) {
     List<LatLng> polylinePoints = [];
     List<String> polylineArray = polyline.split(',');
-    for (int i = 0; i < polylineArray.length; i += 2) {
+    int i;
+    for (i = 0; i < polylineArray.length; i += 2) {
       polylinePoints.add(LatLng(
         double.parse(polylineArray[i]),
         double.parse(polylineArray[i + 1]),

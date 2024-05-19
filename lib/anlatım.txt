@@ -1,0 +1,31 @@
+{ 17 } primaryswatch : ana renk paletini tanımlamak için 
+{ 30-31 } late : normalde bir değişkeni hemen atamamız gerekir ancak late ibaresini kollanırsak atamayı geciktirir yani sonradan
+atanabilme özelliği böylelikle o satırda hata ile karşılaşmamış oluruz... ( 30 - 31 satırlarını sil bişey olmaz)
+{ 33 }current location = mevcut konum
+{ 34 } target location = hedef konum
+{ 34 } LatLng = enlem ve boylam bilgilierni girmek için kullanılır başına ? eklenmesinin sebebi null safety yani değişken değer alabilir
+{ 35 } Set = Benzersiz öğeleri saklamak için kullanılır yani polyline benzersizdir
+_polylines değişkeni boş bir kümedir ( ileride belli olucak )
+{ 49 } double = Bu parametre, rastgele bir konumun mevcut konumdan ne kadar uzaklıkta olacağını belirtir. 
+{ 51 } Random().nextDouble() 0 ile 1 arasında rastgele bir sayı üretir.
+{ 51 }Bu sayı, 2 * pi ile çarpılarak 0 ile 2π (0 ile 360 derece) arasında rastgele bir açı elde edilir.
+{ 52 }Kilometre cinsinden verilen mesafe, yaklaşık 111.12 km'ye bölünerek derece cinsinden mesafeye dönüştürülür. 
+Bu değer, enlem için yaklaşık olarak doğrudur çünkü 1 derece enlem yaklaşık 111.12 km'dir.
+{ 54 } dx ve dy değerleri, rastgele mesafenin rastgele açıya göre x ve y bileşenleridir.
+cos(randomAngle) ve sin(randomAngle) kullanarak rastgele mesafeyi enlem (dx) ve boylam (dy) bileşenlerine ayırırız.
+{ 56 } _currentLocation'un enlemine (latitude) dx eklenir ve boylamına (longitude) dy eklenir.
+Bu şekilde yeni hedef konum (_targetLocation) LatLng sınıfı kullanılarak oluşturulur.
+_currentLocation! ile mevcut konumun null olmadığını garanti ederiz.
+polyline = rota 
+{ 73 } = var kullanılarak sürekli bir şekilde ekleme döngüsü oluşturulur
+LatLng = latitude (enlem)  ve longitude (boylam) bilgilerini tutar. Kütüphanede bulunur.
+{ 91 } = verilen her bir karakteri virgül ile ayırarak  polyline stringi "40.7128,-74.0060,34.0522,-118.2437" ise, 
+polylineArray listesi ["40.7128", "-74.0060", "34.0522", "-118.2437"] olacaktır.
+double = tam sayı değerlerini saklamak içindir
+tryParse = tam sayıya dönüştürmeye çalıştır
+?? = ?? operatörü, özellikle değişkenlerin null olma durumlarına karşı önlem almak ve kodu daha okunabilir hale getirmek için oldukça yararlıdır. 
+Bu operatör sayesinde null kontrolü ve varsayılan değer atama işlemleri daha kısa ve anlaşılır bir şekilde yapılabilir.
+_mapController = harita kontrolleri için kullanılması  gereken kütüphanenin içinde bulunan bir parametredir.
+örnek olarak kameraya animasyon ekleme ve haraket ettirme gibi işlemler yapılabilir.
+child = varsa yeni bir widget yazılmış demektir.
+! bu ibare varsa kesin olarak null değildir.
