@@ -1,6 +1,6 @@
 # new2
 
-A new Flutter Google Maps ( Polyline Projects )
+A simple google maps flutter polyline mobile apps projects...
 
 www.honorable.com.tr
 
